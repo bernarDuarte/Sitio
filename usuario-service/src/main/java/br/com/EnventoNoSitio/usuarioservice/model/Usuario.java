@@ -1,12 +1,14 @@
 package br.com.EnventoNoSitio.usuarioservice.model;
 
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
+import javax.persistence.Transient;
 import lombok.Data;
 
 @Data
@@ -33,5 +35,8 @@ public class Usuario {
     
     @Column(nullable = true,length=1)
     private Long id_adm;
+    
+    @Transient
+    Evento evento;
 }    
 
